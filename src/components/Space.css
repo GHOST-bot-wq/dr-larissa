@@ -1,0 +1,188 @@
+/* ============================================================
+   Space Section Styles — Luxury Editorial
+   ============================================================ */
+
+.space {
+  position: relative;
+  background-color: var(--ivory);
+}
+
+.space__header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto clamp(40px, 6vw, 64px) auto;
+}
+
+.space__title {
+  color: var(--graphite);
+  margin-bottom: 16px;
+}
+
+.space__title em {
+  color: var(--deep-brown);
+}
+
+.space__subtitle {
+  font-size: 1.05rem;
+  color: var(--graphite-muted);
+  line-height: 1.7;
+}
+
+/* ── Galeria Editorial Assimétrica ── */
+.space__gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(24px, 3.5vw, 36px);
+  margin-bottom: 40px;
+}
+
+@media (min-width: 900px) {
+  .space__gallery {
+    grid-template-columns: 1.25fr 0.95fr;
+  }
+}
+
+.space__side-col {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 3.5vw, 36px);
+}
+
+.space__card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--warm-white);
+  border: 1px solid var(--border-sand);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: all var(--transition-smooth);
+}
+
+.space__card:hover {
+  transform: translateY(-3px);
+  border-color: var(--aged-gold);
+  box-shadow: var(--shadow-medium);
+}
+
+.space__image-btn {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+}
+
+.space__img-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--sand-beige);
+}
+
+.space__card--large .space__img-box {
+  aspect-ratio: 4 / 4.2;
+}
+
+.space__card--medium .space__img-box {
+  aspect-ratio: 16 / 9.5;
+}
+
+.space__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.space__card:hover .space__img {
+  transform: scale(1.035);
+}
+
+/* Overlay de Zoom */
+.space__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(41, 39, 36, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.space__card:hover .space__overlay {
+  opacity: 1;
+}
+
+.space__zoom-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ivory);
+  color: var(--graphite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transform: translateY(8px);
+  transition: transform var(--transition-smooth);
+}
+
+.space__card:hover .space__zoom-icon {
+  transform: translateY(0);
+}
+
+.space__overlay-text {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--warm-white);
+  font-weight: 600;
+}
+
+/* Legenda do Card */
+.space__card-caption {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-top: 1px solid var(--border-sand);
+}
+
+.space__card-caption strong {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--graphite);
+}
+
+.space__card-caption span {
+  font-size: 0.78rem;
+  color: var(--graphite-muted);
+}
+
+/* Rodapé */
+.space__footer-note {
+  text-align: center;
+}
+
+.space__footer-note p {
+  font-size: 0.88rem;
+  color: var(--graphite-muted);
+}
+
+.space__insta-link {
+  color: var(--aged-gold);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.space__insta-link:hover {
+  color: var(--deep-brown);
+}

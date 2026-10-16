@@ -1,0 +1,186 @@
+.footer {
+  background-color: #171311;
+  color: #ECE5DE;
+  padding-top: clamp(64px, 8vw, 100px);
+  padding-bottom: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-bottom: clamp(48px, 6vw, 72px);
+}
+
+@media (min-width: 640px) {
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* Coluna Brand */
+.footer__brand-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__brand-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.footer__monogram {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-gold-matte);
+  color: var(--color-gold-matte);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+}
+
+.footer__brand-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.footer__brand-role {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-champagne);
+}
+
+.footer__description {
+  font-size: 0.88rem;
+  color: rgba(236, 229, 222, 0.75);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 380px;
+}
+
+.footer__badges {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__badge-item {
+  display: flex;
+  gap: 8px;
+  font-size: 0.78rem;
+}
+
+.footer__badge-label {
+  color: var(--color-gold-matte);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.footer__badge-val {
+  color: #FFFFFF;
+}
+
+/* Colunas de Links */
+.footer__col-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__links a {
+  font-size: 0.84rem;
+  color: rgba(236, 229, 222, 0.75);
+  transition: color var(--transition-fast);
+}
+
+.footer__links a:hover {
+  color: var(--color-gold-matte);
+}
+
+/* Coluna de Atendimento */
+.footer__contact-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__contact-text {
+  font-size: 0.86rem;
+  color: rgba(236, 229, 222, 0.75);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.footer__btn {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid var(--color-gold-matte);
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 0.74rem;
+  margin-bottom: 16px;
+}
+
+.footer__btn:hover {
+  background-color: var(--color-gold-matte);
+  color: #171311;
+}
+
+.footer__city-pin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--color-champagne);
+}
+
+/* Rodapé Inferior */
+.footer__bottom {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer__legal {
+  font-size: 0.8rem;
+  color: rgba(236, 229, 222, 0.6);
+}
+
+.footer__disclaimer {
+  font-size: 0.74rem;
+  color: rgba(236, 229, 222, 0.45);
+  line-height: 1.6;
+  max-width: 900px;
+}

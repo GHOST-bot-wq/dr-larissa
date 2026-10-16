@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1060" fill="none">
+  <defs>
+    <linearGradient id="bgPortrait" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F3"/>
+      <stop offset="40%" stop-color="#FFFCF9"/>
+      <stop offset="85%" stop-color="#EAD7D3" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#C6AAB9" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="auraGlow" cx="50%" cy="38%" r="45%">
+      <stop offset="0%" stop-color="#B69A60" stop-opacity="0.2"/>
+      <stop offset="70%" stop-color="#FAF7F3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#292625" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo editorial e aura sutil -->
+  <rect width="800" height="1060" fill="url(#bgPortrait)"/>
+  <circle cx="400" cy="400" r="320" fill="url(#auraGlow)"/>
+
+  <!-- Moldura decorativa em ouro fino -->
+  <rect x="36" y="36" width="728" height="988" rx="20" stroke="#B69A60" stroke-width="1.2" stroke-opacity="0.35" fill="none"/>
+  <rect x="46" y="46" width="708" height="968" rx="14" stroke="#B69A60" stroke-width="0.8" stroke-dasharray="6 6" stroke-opacity="0.2" fill="none"/>
+
+  <!-- Canto decorativo luxuoso -->
+  <path d="M 60 80 L 80 60" stroke="#B69A60" stroke-width="1.5" stroke-opacity="0.5"/>
+  <path d="M 740 80 L 720 60" stroke="#B69A60" stroke-width="1.5" stroke-opacity="0.5"/>
+  <path d="M 60 980 L 80 1000" stroke="#B69A60" stroke-width="1.5" stroke-opacity="0.5"/>
+  <path d="M 740 980 L 720 1000" stroke="#B69A60" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <!-- Emblema Monograma GS Superior -->
+  <g transform="translate(400, 160)" filter="url(#softShadow)">
+    <circle cx="0" cy="0" r="48" fill="#FFFCF9" stroke="#B69A60" stroke-width="1.5" stroke-opacity="0.6"/>
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#EAD7D3" stroke-width="1"/>
+    <text x="0" y="8" font-family="'Cormorant Garamond', Georgia, serif" font-size="36" font-weight="600" fill="#292625" text-anchor="middle" letter-spacing="1.5">GS</text>
+  </g>
+
+  <!-- Silhueta Elegante da Especialista (Aesthetic Minimalist Silhouette) -->
+  <g transform="translate(400, 520)">
+    <!-- Base e Jaleco Clínico Elegante -->
+    <path d="M -160 320 C -150 210 -110 120 -60 70 C -40 50 -20 45 0 45 C 20 45 40 50 60 70 C 110 120 150 210 160 320 Z" fill="#FFFCF9" stroke="#B69A60" stroke-width="1.5" stroke-opacity="0.4" filter="url(#softShadow)"/>
+    <!-- Linhas da Lapela e Gola Editorial -->
+    <path d="M -35 70 L -15 190 L 0 205 L 15 190 L 35 70" fill="none" stroke="#B69A60" stroke-width="1.2" stroke-opacity="0.6"/>
+    <line x1="0" y1="205" x2="0" y2="320" stroke="#B69A60" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.4"/>
+    
+    <!-- Pescoço e Rosto Elegante em Contorno -->
+    <path d="M -22 65 L -20 -10 C -20 -10 -40 -30 -35 -85 C -30 -140 30 -140 35 -85 C 40 -30 20 -10 20 -10 L 22 65" fill="#EAD7D3" fill-opacity="0.35" stroke="#292625" stroke-width="1.2" stroke-opacity="0.5"/>
+    
+    <!-- Cabelo e Penteado Refinado -->
+    <path d="M -45 -70 C -55 -125 -30 -170 0 -170 C 30 -170 55 -125 45 -70 C 40 -50 42 -20 48 30 C 32 35 25 10 22 -30 C -22 -30 -25 10 -48 30 C -42 -20 -40 -50 -45 -70 Z" fill="#292625" fill-opacity="0.75"/>
+    <circle cx="0" cy="-90" r="3" fill="#B69A60"/>
+  </g>
+
+  <!-- Faixa de Texto Editorial Inferior -->
+  <g transform="translate(400, 890)">
+    <line x1="-120" y1="-50" x2="120" y2="-50" stroke="#B69A60" stroke-width="1" stroke-opacity="0.4"/>
+    <circle cx="0" cy="-50" r="3" fill="#B69A60"/>
+    
+    <text x="0" y="-18" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="600" fill="#B69A60" text-anchor="middle" letter-spacing="4">RESPONSÁVEL TÉCNICA</text>
+    <text x="0" y="24" font-family="'Cormorant Garamond', Georgia, serif" font-size="38" font-weight="500" fill="#292625" text-anchor="middle">Gabrielly Sampaio</text>
+    <text x="0" y="56" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="300" fill="#645F5D" text-anchor="middle" letter-spacing="1.5">Estética Integrada &amp; Tecnologias Avançadas</text>
+  </g>
+</svg>

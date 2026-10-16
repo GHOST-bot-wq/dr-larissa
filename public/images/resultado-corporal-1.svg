@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bgResult1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F3"/>
+      <stop offset="60%" stop-color="#FFFCF9"/>
+      <stop offset="100%" stop-color="#EAD7D3" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="contourGlow" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#B69A60" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FAF7F3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgResult1)"/>
+  <circle cx="400" cy="240" r="190" fill="url(#contourGlow)"/>
+
+  <!-- Moldura Fina Editorial -->
+  <rect x="25" y="25" width="750" height="550" rx="16" stroke="#B69A60" stroke-width="1" stroke-opacity="0.25" fill="none"/>
+
+  <!-- Diagrama de Curvas de Evolução & Contorno Corporal (Acompanhamento Clínico) -->
+  <g transform="translate(400, 230)">
+    <!-- Linhas guia de simetria anatômica -->
+    <line x1="0" y1="-140" x2="0" y2="140" stroke="#B69A60" stroke-width="0.8" stroke-dasharray="4 6" stroke-opacity="0.3"/>
+    
+    <!-- Silhueta Inicial (Tracejada sutil) -->
+    <path d="M -110 -110 C -85 -40 -130 30 -105 110" fill="none" stroke="#C6AAB9" stroke-width="2" stroke-dasharray="6 6" stroke-opacity="0.6"/>
+    <path d="M 110 -110 C 85 -40 130 30 105 110" fill="none" stroke="#C6AAB9" stroke-width="2" stroke-dasharray="6 6" stroke-opacity="0.6"/>
+    
+    <!-- Silhueta Harmonizada e Definida (Linha Dourada Contínua) -->
+    <path d="M -95 -110 C -68 -40 -98 30 -85 110" fill="none" stroke="#B69A60" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 95 -110 C 68 -40 98 30 85 110" fill="none" stroke="#B69A60" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Pontos de Medição e Precisão -->
+    <circle cx="-68" cy="-40" r="4.5" fill="#B69A60"/>
+    <circle cx="68" cy="-40" r="4.5" fill="#B69A60"/>
+    <line x1="-68" y1="-40" x2="68" y2="-40" stroke="#B69A60" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5"/>
+    
+    <circle cx="-98" cy="30" r="4" fill="#EAD7D3"/>
+    <circle cx="98" cy="30" r="4" fill="#EAD7D3"/>
+
+    <!-- Badge Central de Precisão -->
+    <rect x="-80" y="-12" width="160" height="24" rx="12" fill="#FFFCF9" stroke="#B69A60" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="0" y="4" font-family="'Inter', -apple-system, sans-serif" font-size="9" font-weight="600" fill="#292625" text-anchor="middle" letter-spacing="2">HARMONIZAÇÃO DE FLANCOS</text>
+  </g>
+
+  <!-- Tipografia Editorial Inferior -->
+  <line x1="260" y1="440" x2="540" y2="440" stroke="#B69A60" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="400" cy="440" r="3" fill="#B69A60"/>
+  
+  <text x="400" y="475" font-family="'Cormorant Garamond', Georgia, serif" font-size="28" font-style="italic" fill="#292625" text-anchor="middle">Acompanhamento Corporal Documentado</text>
+  <text x="400" y="505" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="500" fill="#B69A60" text-anchor="middle" letter-spacing="3.5">CRIOLIPÓLISE &amp; REMODELAGEM DE CONTORNO</text>
+</svg>

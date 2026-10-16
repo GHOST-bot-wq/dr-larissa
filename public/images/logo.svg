@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="24" fill="#FAF7F3"/>
+  <rect x="6" y="6" width="108" height="108" rx="18" stroke="#B69A60" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="60" y="66" font-family="'Cormorant Garamond', Georgia, serif" font-size="44" font-weight="600" fill="#292625" text-anchor="middle" letter-spacing="2">GS</text>
+  <text x="60" y="86" font-family="'Inter', -apple-system, sans-serif" font-size="8.5" font-weight="500" fill="#B69A60" text-anchor="middle" letter-spacing="3.5">ESTÉTICA</text>
+</svg>

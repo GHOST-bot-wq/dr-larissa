@@ -1,0 +1,127 @@
+.approach {
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+  background-color: var(--color-ivory);
+}
+
+.approach__header {
+  max-width: 700px;
+  margin-bottom: clamp(52px, 7vw, 90px);
+}
+
+.approach__steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .approach__steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .approach__steps-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+}
+
+.approach__card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-light);
+  padding: clamp(28px, 3.5vw, 40px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-editorial);
+}
+
+.approach__card:hover {
+  border-color: var(--color-champagne);
+  box-shadow: 0 20px 45px -15px rgba(32, 25, 21, 0.08);
+  transform: translateY(-4px);
+}
+
+.approach__card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.approach__number {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--color-gold-matte);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.approach__step-pill {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-subtle-text);
+  background: var(--color-ivory-warm);
+  padding: 4px 10px;
+}
+
+.approach__card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.approach__subtitle {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-gold-matte);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.approach__title {
+  font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+  font-weight: 400;
+  color: var(--color-espresso);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.approach__desc {
+  font-size: 0.92rem;
+  color: var(--color-muted-text);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.approach__highlight-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: #FAF8F5;
+  padding: 12px 14px;
+  border-left: 2px solid var(--color-champagne);
+}
+
+.approach__highlight-icon {
+  color: var(--color-gold-matte);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.approach__highlight-text {
+  font-size: 0.78rem;
+  color: var(--color-charcoal-text);
+  line-height: 1.5;
+  font-weight: 500;
+}

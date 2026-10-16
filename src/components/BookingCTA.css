@@ -1,0 +1,113 @@
+.booking-cta {
+  position: relative;
+  padding-top: clamp(80px, 10vw, 140px);
+  padding-bottom: clamp(80px, 10vw, 140px);
+  background-color: var(--color-espresso-rich);
+  color: #FFFFFF;
+  overflow: hidden;
+  text-align: center;
+}
+
+.booking-cta__ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 60vw;
+  max-width: 650px;
+  max-height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(197, 168, 128, 0.15) 0%, rgba(23, 18, 15, 0) 70%);
+  pointer-events: none;
+}
+
+.booking-cta__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-cta__monogram {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+  color: var(--color-gold-matte);
+  margin-bottom: 8px;
+}
+
+.booking-cta__eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-champagne);
+  margin-bottom: 1.5rem;
+}
+
+.booking-cta__title {
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
+  font-weight: 300;
+  color: #FAF8F5;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.booking-cta__title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-champagne-light);
+}
+
+.booking-cta__text {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  color: rgba(250, 248, 245, 0.8);
+  line-height: 1.7;
+  max-width: 540px;
+  margin-bottom: 2.75rem;
+}
+
+.booking-cta__action {
+  margin-bottom: 3rem;
+}
+
+.booking-cta__btn {
+  background-color: var(--color-gold-matte);
+  color: #17120F;
+  border-color: var(--color-gold-matte);
+  padding: 18px 42px;
+  font-size: 0.84rem;
+  letter-spacing: 0.18em;
+  box-shadow: 0 15px 35px -10px rgba(197, 168, 128, 0.3);
+}
+
+.booking-cta__btn:hover {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #17120F;
+  box-shadow: 0 20px 45px -10px rgba(255, 255, 255, 0.25);
+}
+
+.booking-cta__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: rgba(250, 248, 245, 0.6);
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  width: 100%;
+}
+
+.booking-cta__meta-bullet {
+  color: var(--color-gold-matte);
+}

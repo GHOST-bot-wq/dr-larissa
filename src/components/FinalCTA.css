@@ -1,0 +1,144 @@
+.final-cta {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--graphite);
+}
+
+/* ── Fundo ── */
+.final-cta__bg {
+  position: absolute;
+  inset: 0;
+}
+
+.final-cta__bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0.35;
+  transition: transform 12s ease;
+}
+
+.final-cta:hover .final-cta__bg-image {
+  transform: scale(1.04);
+}
+
+.final-cta__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(41, 38, 37, 0.88) 0%,
+    rgba(41, 38, 37, 0.6) 60%,
+    rgba(41, 38, 37, 0.75) 100%
+  );
+}
+
+/* ── Conteúdo ── */
+.final-cta__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.final-cta.is-visible .final-cta__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.final-cta__eyebrow {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--gold);
+}
+
+.final-cta__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 300;
+  color: var(--ivory);
+  line-height: 1.1;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
+
+.final-cta__title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.final-cta__text {
+  font-size: 1rem;
+  color: rgba(250, 247, 243, 0.75);
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+.final-cta__actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.final-cta__btn-primary {
+  background: var(--gold) !important;
+  border-color: var(--gold) !important;
+  color: var(--warm-white) !important;
+  padding: 16px 40px !important;
+  font-size: 0.75rem !important;
+}
+
+.final-cta__btn-primary:hover {
+  background: var(--ivory) !important;
+  color: var(--graphite) !important;
+  border-color: var(--ivory) !important;
+}
+
+.final-cta__instagram {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: rgba(250, 247, 243, 0.65);
+  transition: color var(--transition-fast);
+}
+
+.final-cta__instagram:hover { color: var(--gold); }
+
+/* Detalhe decorativo */
+.final-cta__deco {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: rgba(182, 154, 96, 0.5);
+  font-size: 0.7rem;
+}
+
+.final-cta__deco-line {
+  width: 60px;
+  height: 1px;
+  background: rgba(182, 154, 96, 0.4);
+}
+
+/* ── Responsivo ── */
+@media (max-width: 640px) {
+  .final-cta__actions {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hide-mobile { display: none; }
+}

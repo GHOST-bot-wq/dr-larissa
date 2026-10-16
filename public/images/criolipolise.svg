@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bgCrio" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFCF9"/>
+      <stop offset="60%" stop-color="#FAF7F3"/>
+      <stop offset="100%" stop-color="#C6AAB9" stop-opacity="0.3"/>
+    </linearGradient>
+    <radialGradient id="freezeGlow" cx="50%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#FAF7F3"/>
+      <stop offset="40%" stop-color="#EAD7D3" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FFFCF9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgCrio)"/>
+  <circle cx="400" cy="250" r="180" fill="url(#freezeGlow)"/>
+
+  <!-- Símbolo de Resfriamento Controlado e Modelagem -->
+  <g transform="translate(400, 240)">
+    <!-- Aplicador e manípulo de sucção controlada -->
+    <rect x="-70" y="-80" width="140" height="85" rx="16" fill="#FFFCF9" stroke="#B69A60" stroke-width="1.5" stroke-opacity="0.7"/>
+    <rect x="-55" y="-65" width="110" height="55" rx="10" fill="#FAF7F3" stroke="#C6AAB9" stroke-width="1"/>
+    
+    <!-- Indicador de temperatura suave / cristal térmico -->
+    <circle cx="0" cy="-37" r="14" fill="#EAD7D3" fill-opacity="0.5"/>
+    <text x="0" y="-32" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#292625" text-anchor="middle">-°C</text>
+
+    <!-- Onda de Tecido e Modelagem Localizada -->
+    <path d="M -110 50 C -50 10 50 10 110 50" fill="none" stroke="#B69A60" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M -80 75 C -40 45 40 45 80 75" fill="none" stroke="#EAD7D3" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <line x1="280" y1="430" x2="520" y2="430" stroke="#B69A60" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="400" y="470" font-family="'Cormorant Garamond', Georgia, serif" font-size="28" font-style="italic" fill="#292625" text-anchor="middle">Criolipólise Avançada</text>
+  <text x="400" y="500" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="500" fill="#B69A60" text-anchor="middle" letter-spacing="4">RESFRIAMENTO CONTROLADO &amp; HARMONIZAÇÃO</text>
+</svg>

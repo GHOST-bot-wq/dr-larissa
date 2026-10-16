@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bgLaser" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFCF9"/>
+      <stop offset="50%" stop-color="#FAF7F3"/>
+      <stop offset="100%" stop-color="#EAD7D3" stop-opacity="0.4"/>
+    </linearGradient>
+    <radialGradient id="laserPulse" cx="50%" cy="45%" r="35%">
+      <stop offset="0%" stop-color="#B69A60" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#C6AAB9" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FFFCF9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#B69A60" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#B69A60" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgLaser)"/>
+  <circle cx="400" cy="270" r="210" fill="url(#laserPulse)"/>
+
+  <!-- Moldura Fina e Discreta -->
+  <rect x="25" y="25" width="750" height="550" rx="16" stroke="#B69A60" stroke-width="1" stroke-opacity="0.25" fill="none"/>
+
+  <!-- Ilustração da Ponteira de Alta Tecnologia com Resfriamento Cutâneo -->
+  <g transform="translate(400, 240)">
+    <!-- Halo de resfriamento cristalino -->
+    <ellipse cx="0" cy="80" rx="110" ry="24" stroke="#B69A60" stroke-width="1.2" stroke-opacity="0.4" stroke-dasharray="4 4"/>
+    <ellipse cx="0" cy="80" rx="80" ry="16" fill="#FAF7F3" fill-opacity="0.6" stroke="#C6AAB9" stroke-width="1"/>
+
+    <!-- Feixe Guia de Alta Precisão -->
+    <path d="M -15 -10 L 0 78 L 15 -10 Z" fill="url(#beamGrad)"/>
+    <circle cx="0" cy="80" r="5" fill="#B69A60"/>
+    <circle cx="0" cy="80" r="14" stroke="#B69A60" stroke-width="1.5" stroke-opacity="0.5" fill="none"/>
+
+    <!-- Corpo Anatômico da Manopla / Handpiece -->
+    <path d="M -24 -150 C -24 -170 -16 -180 0 -180 C 16 -180 24 -170 24 -150 L 20 -30 L 15 -10 L -15 -10 L -20 -30 Z" fill="#292625" stroke="#B69A60" stroke-width="1.5"/>
+    <rect x="-10" y="-140" width="20" height="45" rx="4" fill="#B69A60" fill-opacity="0.8"/>
+    <line x1="-16" y1="-60" x2="16" y2="-60" stroke="#FFFCF9" stroke-width="1" stroke-opacity="0.5"/>
+    <line x1="-18" y1="-40" x2="18" y2="-40" stroke="#B69A60" stroke-width="1"/>
+
+    <!-- Onda de Pulso Térmico Suave -->
+    <circle cx="0" cy="80" r="45" stroke="#B69A60" stroke-width="1" stroke-opacity="0.3" fill="none"/>
+    <circle cx="0" cy="80" r="70" stroke="#B69A60" stroke-width="0.8" stroke-dasharray="6 6" stroke-opacity="0.25" fill="none"/>
+  </g>
+
+  <!-- Tipografia Editorial Inferior -->
+  <line x1="260" y1="440" x2="540" y2="440" stroke="#B69A60" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="400" cy="440" r="3" fill="#B69A60"/>
+  
+  <text x="400" y="475" font-family="'Cormorant Garamond', Georgia, serif" font-size="28" font-style="italic" fill="#292625" text-anchor="middle">Tecnologia a Laser de Alta Precisão</text>
+  <text x="400" y="505" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="500" fill="#B69A60" text-anchor="middle" letter-spacing="3.5">PONTEIRA DE RESFRIAMENTO &amp; MÁXIMO CONFORTO</text>
+</svg>

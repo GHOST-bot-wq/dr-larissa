@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bgGradCorp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFCF9"/>
+      <stop offset="60%" stop-color="#FAF7F3"/>
+      <stop offset="100%" stop-color="#C6AAB9" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgGradCorp)"/>
+  
+  <!-- Curvas orgânicas e fluidas representando o corpo feminino -->
+  <path d="M350 120 C320 200 440 280 340 370 C290 420 370 470 420 500" fill="none" stroke="#EAD7D3" stroke-width="32" stroke-linecap="round"/>
+  <path d="M430 110 C460 210 330 290 430 380 C480 430 380 490 350 510" fill="none" stroke="#B69A60" stroke-width="2" stroke-opacity="0.5"/>
+  <circle cx="430" cy="240" r="8" fill="#B69A60" fill-opacity="0.7"/>
+  <circle cx="360" cy="330" r="5" fill="#C6AAB9"/>
+  
+  <line x1="280" y1="430" x2="520" y2="430" stroke="#B69A60" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="400" y="470" font-family="'Cormorant Garamond', Georgia, serif" font-size="28" font-style="italic" fill="#292625" text-anchor="middle">Tratamentos Corporais Integrados</text>
+  <text x="400" y="500" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="500" fill="#B69A60" text-anchor="middle" letter-spacing="4">HARMONIA, FIRMEZA &amp; TONICIDADE</text>
+</svg>

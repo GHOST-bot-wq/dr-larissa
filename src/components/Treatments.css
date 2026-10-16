@@ -1,0 +1,208 @@
+.treatments {
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+  background-color: var(--color-ivory);
+}
+
+.treatments__header {
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+
+.treatments__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+@media (min-width: 768px) {
+  .treatments__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.treatment-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-editorial);
+  position: relative;
+}
+
+.treatment-card:hover {
+  border-color: var(--color-champagne);
+  box-shadow: 0 20px 45px -15px rgba(32, 25, 21, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Card Destacado (Preenchimento Labial com Fotografia Real) */
+.treatment-card--featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .treatment-card--featured {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.treatment-card__image-box {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  background-color: #EAE3D9;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.treatment-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.treatment-card:hover .treatment-card__img {
+  transform: scale(1.04);
+}
+
+.treatment-card__img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(32, 25, 21, 0) 60%, rgba(32, 25, 21, 0.6) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.treatment-card__img-caption {
+  font-size: 0.76rem;
+  color: #FFFFFF;
+  letter-spacing: 0.06em;
+  font-weight: 400;
+  background: rgba(32, 25, 21, 0.45);
+  backdrop-filter: blur(4px);
+  padding: 6px 12px;
+  border-left: 2px solid var(--color-gold-matte);
+}
+
+.treatment-card__body {
+  padding: clamp(28px, 4vw, 42px);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.treatment-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.treatment-card__index {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-gold-matte);
+}
+
+.treatment-card__subtitle {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-subtle-text);
+  font-weight: 500;
+}
+
+.treatment-card__title {
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 400;
+  color: var(--color-espresso);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.treatment-card__desc {
+  font-size: 0.94rem;
+  color: var(--color-muted-text);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.treatment-card__checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 2rem;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-light);
+}
+
+.treatment-card__checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.86rem;
+  color: var(--color-charcoal-text);
+  line-height: 1.5;
+}
+
+.treatment-card__check-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-gold-matte);
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.treatment-card__action {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.treatment-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-espresso);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.treatment-card__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-gold-matte);
+  transition: transform var(--transition-fast);
+  transform-origin: left;
+}
+
+.treatment-card__link:hover {
+  color: var(--color-gold-matte);
+}
+
+.treatment-card__link:hover svg {
+  transform: translateX(4px);
+}
+
+.treatment-card__link svg {
+  transition: transform var(--transition-fast);
+}

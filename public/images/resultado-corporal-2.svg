@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bgResult2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFCF9"/>
+      <stop offset="50%" stop-color="#FAF7F3"/>
+      <stop offset="100%" stop-color="#C6AAB9" stop-opacity="0.3"/>
+    </linearGradient>
+    <radialGradient id="tonicGlow" cx="50%" cy="40%" r="42%">
+      <stop offset="0%" stop-color="#EAD7D3" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#FFFCF9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgResult2)"/>
+  <circle cx="400" cy="240" r="190" fill="url(#tonicGlow)"/>
+
+  <!-- Moldura Fina Editorial -->
+  <rect x="25" y="25" width="750" height="550" rx="16" stroke="#B69A60" stroke-width="1" stroke-opacity="0.25" fill="none"/>
+
+  <!-- Ilustração Abstrata de Firmeza e Tônus Abdominal -->
+  <g transform="translate(400, 230)">
+    <!-- Formas de tônus dérmico -->
+    <path d="M -90 -120 Q -40 20 -90 120" fill="none" stroke="#B69A60" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 90 -120 Q 40 20 90 120" fill="none" stroke="#B69A60" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Linhas de definição muscular e contorno suave -->
+    <path d="M 0 -80 L 0 80" stroke="#B69A60" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.4"/>
+    <circle cx="0" cy="15" r="4" fill="#B69A60"/>
+    
+    <path d="M -35 -40 Q 0 -25 35 -40" fill="none" stroke="#292625" stroke-width="1.2" stroke-opacity="0.4"/>
+    <path d="M -40 40 Q 0 55 40 40" fill="none" stroke="#292625" stroke-width="1.2" stroke-opacity="0.4"/>
+
+    <!-- Arcos Concêntricos de Densidade e Colágeno -->
+    <circle cx="0" cy="10" r="80" stroke="#B69A60" stroke-width="0.8" stroke-dasharray="2 6" stroke-opacity="0.3" fill="none"/>
+    <circle cx="0" cy="10" r="115" stroke="#C6AAB9" stroke-width="0.8" stroke-opacity="0.25" fill="none"/>
+
+    <rect x="-85" y="-12" width="170" height="24" rx="12" fill="#FFFCF9" stroke="#B69A60" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="0" y="4" font-family="'Inter', -apple-system, sans-serif" font-size="9" font-weight="600" fill="#292625" text-anchor="middle" letter-spacing="2">DENSIDADE &amp; TONICIDADE</text>
+  </g>
+
+  <!-- Tipografia Editorial Inferior -->
+  <line x1="260" y1="440" x2="540" y2="440" stroke="#B69A60" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="400" cy="440" r="3" fill="#B69A60"/>
+  
+  <text x="400" y="475" font-family="'Cormorant Garamond', Georgia, serif" font-size="28" font-style="italic" fill="#292625" text-anchor="middle">Protocolos de Contorno &amp; Firmeza</text>
+  <text x="400" y="505" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="500" fill="#B69A60" text-anchor="middle" letter-spacing="3.5">ESTÍMULO TISSULAR &amp; DEFINIÇÃO HARMONIOSA</text>
+</svg>

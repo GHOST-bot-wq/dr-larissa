@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bgGradDetox" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F3"/>
+      <stop offset="40%" stop-color="#FFFCF9"/>
+      <stop offset="100%" stop-color="#EAD7D3" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgGradDetox)"/>
+  
+  <!-- Formas fluidas de água/drenagem/desintoxicação -->
+  <path d="M200 300 Q400 180 600 300 T1000 300" fill="none" stroke="#C6AAB9" stroke-width="1.5" stroke-opacity="0.4"/>
+  <path d="M150 330 Q350 210 550 330 T950 330" fill="none" stroke="#B69A60" stroke-width="2" stroke-opacity="0.5"/>
+  <path d="M250 270 Q450 390 650 270" fill="none" stroke="#EAD7D3" stroke-width="8" stroke-linecap="round"/>
+  
+  <circle cx="390" cy="220" r="16" fill="#C6AAB9" fill-opacity="0.2"/>
+  <circle cx="415" cy="210" r="8" fill="#B69A60" fill-opacity="0.4"/>
+  <circle cx="380" cy="245" r="5" fill="#292625" fill-opacity="0.3"/>
+  
+  <line x1="280" y1="430" x2="520" y2="430" stroke="#B69A60" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="400" y="470" font-family="'Cormorant Garamond', Georgia, serif" font-size="28" font-style="italic" fill="#292625" text-anchor="middle">Detox Corporal &amp; Drenagem</text>
+  <text x="400" y="500" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="500" fill="#B69A60" text-anchor="middle" letter-spacing="4">LEVEZA, DESINTOXICAÇÃO &amp; EQUILÍBRIO</text>
+</svg>
