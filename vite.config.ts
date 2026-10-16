@@ -7,15 +7,16 @@ import { fileURLToPath } from 'node:url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-// Diretórios onde as 4 imagens originais enviadas pelo usuário podem residir
+// Diretórios onde as 4 imagens originais residem no sistema
 const brainDirs = [
-  'C:/Users/Win11/.gemini/antigravity/brain/ee1d426d-d1be-4cbf-9a6e-9e2c1d3900db/.user_uploaded',
-  'C:/Users/Win11/.gemini/antigravity/brain/b7166e09-9954-4e32-9235-10ee1b85428e/.user_uploaded',
-  'C:/Users/Win11/.gemini/antigravity/brain/910965cd-2784-4abe-b097-25238441b475/.user_uploaded',
+  path.normalize('C:/Users/Win11/.gemini/antigravity/brain/ee1d426d-d1be-4cbf-9a6e-9e2c1d3900db/.user_uploaded'),
+  path.normalize('C:/Users/Win11/.gemini/antigravity/brain/b7166e09-9954-4e32-9235-10ee1b85428e/.user_uploaded'),
+  path.normalize('C:/Users/Win11/.gemini/antigravity/brain/910965cd-2784-4abe-b097-25238441b475/.user_uploaded'),
 ]
 
 const targetDirs = [
   path.resolve(__dirname, 'public/images'),
+  path.resolve(__dirname, 'public'),
   path.resolve(__dirname, 'images'),
   path.resolve(__dirname, 'src/assets/images'),
 ]
@@ -49,8 +50,8 @@ function ensureImagesCopied() {
       if (!fs.existsSync(targetDir)) {
         fs.mkdirSync(targetDir, { recursive: true })
       }
-    } catch (err) {
-      console.warn('[Vite Setup] Erro ao criar diretório:', targetDir, err)
+    } catch {
+      // silencioso
     }
   }
 
@@ -64,9 +65,13 @@ function ensureImagesCopied() {
             try {
               const destPath = path.join(targetDir, item.dest)
               fs.copyFileSync(srcPath, destPath)
-              console.log(`[Vite Setup] Imagem sincronizada com sucesso: ${item.dest} -> ${destPath}`)
-            } catch (err) {
-              console.warn('[Vite Setup] Erro ao copiar imagem para:', targetDir, err)
+              // Também copia com o nome original (media_...) no public/ para garantir qualquer acesso
+              const directMediaDest = path.join(targetDir, srcName)
+              if (!fs.existsSync(directMediaDest)) {
+                fs.copyFileSync(srcPath, directMediaDest)
+              }
+            } catch {
+              // silencioso
             }
           }
           found = true
@@ -90,15 +95,23 @@ export default defineConfig({
         ensureImagesCopied()
       },
       configureServer(server) {
+        ensureImagesCopied()
+
         server.middlewares.use((req, res, next) => {
           if (!req.url) return next()
           const cleanUrl = req.url.split('?')[0]
+
+          // Se for requisição de imagem, garante sincronização
+          if (cleanUrl.includes('/images/') || cleanUrl.includes('media_')) {
+            ensureImagesCopied()
+          }
 
           const matched = imageMappings.find(
             (item) =>
               cleanUrl === `/images/${item.dest}` ||
               cleanUrl === `/${item.dest}` ||
-              cleanUrl.endsWith(`/${item.dest}`)
+              cleanUrl.endsWith(`/${item.dest}`) ||
+              item.srcs.some((s) => cleanUrl.endsWith(`/${s}`))
           )
 
           if (matched) {
@@ -109,14 +122,8 @@ export default defineConfig({
               res.setHeader('Cache-Control', 'public, max-age=31536000')
               return fs.createReadStream(publicPath).pipe(res)
             }
-            // 2. Checa em images
-            const rootImagesPath = path.resolve(__dirname, 'images', matched.dest)
-            if (fs.existsSync(rootImagesPath)) {
-              res.setHeader('Content-Type', matched.mime)
-              res.setHeader('Cache-Control', 'public, max-age=31536000')
-              return fs.createReadStream(rootImagesPath).pipe(res)
-            }
-            // 3. Fallback direto no brain directory (.user_uploaded)
+
+            // 2. Fallback direto no brain directory (.user_uploaded)
             for (const dir of brainDirs) {
               for (const srcName of matched.srcs) {
                 const srcPath = path.join(dir, srcName)
@@ -135,7 +142,7 @@ export default defineConfig({
         server.middlewares.use((req, res, next) => {
           if (!req.url) return next()
           const cleanUrl = req.url.split('?')[0]
-          const matched = imageMappings.find((item) => cleanUrl === `/images/${item.dest}`)
+          const matched = imageMappings.find((item) => cleanUrl.endsWith(`/${item.dest}`))
           if (matched) {
             const publicPath = path.resolve(__dirname, 'public/images', matched.dest)
             if (fs.existsSync(publicPath)) {
@@ -152,5 +159,12 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
+    fs: {
+      strict: false,
+      allow: [
+        path.resolve(__dirname),
+        'C:/Users/Win11',
+      ],
+    },
   },
 })
